@@ -1,0 +1,49 @@
+{
+  "name": "mh-z19",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "serialport": "^7.1.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.8",
+    "@types/serialport": "^7.0.2",
+    "@types/sinon": "^7.0.11",
+    "@types/sinon-chai": "^3.2.2",
+    "chai": "^4.2.0",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
+    "mocha": "^6.1.4",
+    "prettier": "^1.17.0",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.5",
+    "typescript-tslint-plugin": "^0.3.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter dot",
+    "test:watch": "yarn test --watch"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --config .prettierrc --write",
+      "tslint -c tslint.json --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "post-checkout": "yarn",
+      "post-merge": "yarn",
+      "pre-commit": "lint-staged"
+    }
+  }
+}

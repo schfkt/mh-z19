@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "module": "commonjs",
+    "target": "ES2018",
+    "sourceMap": true,
+    "pretty": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "preserveConstEnums": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "plugins": [
+      { "name": "typescript-tslint-plugin" }
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}
