@@ -1,0 +1,8 @@
+* Readme
+
+This is a simple app that can read CO2 concentration data from a MH-Z19 sensor.
+
+** Things left to do
+
++ [ ] Verify CRC for the values read
++ [ ] Add tests
